@@ -307,13 +307,13 @@ const ScreeningTest = () => {
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span>{option.label}</span>
-                  <span style={{
+                  {/* <span style={{
                     fontSize: '14px',
                     opacity: 0.8,
                     fontWeight: '600'
                   }}>
                     {option.value} point{option.value !== 1 ? 's' : ''}
-                  </span>
+                  </span> */}
                 </div>
               </label>
             ))}

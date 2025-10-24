@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
+const axios = require('axios');
 
 const { signUp } = require("./controllers/signup.js");
 const { login } = require("./controllers/login.js");
@@ -10,10 +10,16 @@ const adminRoutes = require('./routes/admin');
 // const appointmentsRoutes = require("./routes/appointments");
 
 
+// const { chatHandler } = require('./rag/ragController');
+// const { loadDocuments } = require('./rag/vectorStore');
+
+// loadDocuments().then(() => console.log("RAG documents loaded"));
+
+
 
 const app = express();
 
-
+// app.use(axios);
 app.use(cors());
 app.use(bodyParser.json()); 
 
@@ -97,7 +103,7 @@ app.post('/api/appointments', (req, res) => {
 
   const sql = `INSERT INTO appointments 
                (student_name, counselor_name, date, time, type, urgency, reason, status) 
-               VALUES (?, ?, ?, ?, ?, ?, ?, 'confirmed')`;
+               VALUES (?, ?, ?, ?, ?, ?, ?, 'pending')`;
 
   db.query(sql, [student_name, counselor_name, date, time, type, urgency, reason], (err, result) => {
     if (err) return res.status(500).json(err);
@@ -186,6 +192,9 @@ app.get("/api/admin/severe-students", (req, res) => {
 });
 
 // ... app.listen at the bottom
+
+
+// app.post('/api/chat', chatHandler);
 
 
 app.get("/", (req, res) => {

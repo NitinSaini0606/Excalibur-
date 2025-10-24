@@ -104,11 +104,12 @@ import StudentDetailsPage from './pages/StudentDetailsPage';
 import StudentDashboard from './pages/StudentDashboard';
 import ScreeningTest from './pages/ScreeningTest';
 import ResourceHub from './pages/ResourceHub';
+
 import PeerSupport from './pages/PeerSupport';
 import BookAppointment from './pages/BookAppointment';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import Chatbot from './pages/chatbot';
+// import Chatbot from './pages/chatbot';
 import './App.css';
 
 function App() {
@@ -142,7 +143,7 @@ function App() {
                   path="/chatbot" 
                   element={
                     <ProtectedRoute>
-                      <Chatbot/>
+                      {/* <Chatbot/> */}
                     </ProtectedRoute>
                   } 
                 />
@@ -159,6 +160,7 @@ function App() {
                   element={
                     <ProtectedRoute>
                       <ResourceHub />
+                      
                     </ProtectedRoute>
                   } 
                 />
