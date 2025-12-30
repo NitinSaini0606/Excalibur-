@@ -3,6 +3,16 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const axios = require('axios');
 
+const dotenv = require("dotenv");
+const fs = require('fs');
+const path = require('path');
+const  { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// const chatRoutes = require("./routes/chat");
+
+const chatRoute = require("./routes/chat.js");
+
+
 const { signUp } = require("./controllers/signup.js");
 const { login } = require("./controllers/login.js");
 const { updateStudentDetails } = require("./controllers/studentDetails");
@@ -15,7 +25,7 @@ const adminRoutes = require('./routes/admin');
 
 // loadDocuments().then(() => console.log("RAG documents loaded"));
 
-
+dotenv.config();
 
 const app = express();
 
@@ -33,12 +43,10 @@ app.post("/api/signup", signUp);
 app.post("/api/login", login);
 app.post("/api/student-details", updateStudentDetails);
 app.use('/api/admin', adminRoutes);
-// app.use("/api/appointments", appointmentsRoutes);
 
-// Import your database connection
-const db = require('./config/db.js') // adjust path if your db.js is somewhere else
 
-// Route to send notification to admins
+const db = require('./config/db.js') 
+
 app.post('/api/admin/notify-student', (req, res) => {
   const { studentId, name, hostelNo, roomNo, phone, phq9Score, gad7Score, riskLevel, status } = req.body;
 
@@ -126,13 +134,6 @@ app.post('/api/appointments', (req, res) => {
 
 
 
-// Optional: Get all appointments
-// app.get('/api/appointments', (req, res) => {
-//   db.query('SELECT * FROM appointments ORDER BY booked_at DESC', (err, results) => {
-//     if (err) return res.status(500).json(err);
-//     res.json(results);
-//   });
-// });
 app.get('/api/appointments', (req, res) => {
   db.query('SELECT * FROM appointments ORDER BY booked_at DESC', (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
@@ -191,10 +192,77 @@ app.get("/api/admin/severe-students", (req, res) => {
   });
 });
 
+
+
+
+// app.use(bodyParser.json());
+
+// const __dirname = path.resolve();
+// const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+// // 🔹 Step 1: Load all .txt files from /backend/data
+// let allData = "";
+// const dataDir = path.join(__dirname, "data");
+// // console.log("Looking for data in:", dataDir);
+
+// if (fs.existsSync(dataDir)) {
+//   const files = fs.readdirSync(dataDir);
+//   files.forEach((file) => {
+//     if (file.endsWith(".txt")) {
+//       const content = fs.readFileSync(path.join(dataDir, file), "utf-8");
+//       allData += `\n${content}`;
+//     }
+//   });
+// } else {
+//   console.warn("⚠️ No data directory found. Create /backend/data and add .txt files.");
+// }
+
+// // 🔹 Step 2: Basic context retrieval (simple RAG)
+// function getRelevantChunks(query) {
+//   const sentences = allData.split(".");
+//   const relevant = sentences
+//     .filter((s) => s.toLowerCase().includes(query.toLowerCase()))
+//     .slice(0, 5)
+//     .join(". ");
+//   return relevant || sentences.slice(0, 5).join(". ");
+// }
+
+// // 🔹 Step 3: API endpoint for chatbot
+// app.post("/api/chat", async (req, res) => {
+//   try {
+//     const { message } = req.body;
+//     const context = getRelevantChunks(message);
+
+//     const prompt = `
+// You are a helpful assistant. Use the context to answer accurately.
+
+// CONTEXT:
+// ${context}
+
+// USER QUESTION:
+// ${message}
+
+// ANSWER:
+// `;
+
+//     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+//     const result = await model.generateContent(prompt);
+//     const response = result.response.text();
+
+//     res.json({ reply: response });
+//   } catch (error) {
+//     console.error("Error:", error);
+//     res.status(500).json({ error: "Something went wrong" });
+//   }
+// });
+
 // ... app.listen at the bottom
 
 
 // app.post('/api/chat', chatHandler);
+
+// app.use("/api/chat", chatRoutes);
+app.use("/api", chatRoute);
 
 
 app.get("/", (req, res) => {
