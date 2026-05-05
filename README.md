@@ -297,10 +297,9 @@ Create a `.env` file inside the required backend / AI folder:
 DB_HOST=localhost
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
-DB_NAME=mindcare
+DB_NAME=mindtech
 
-GROQ_API_KEY=your_api_key_here
-GROQ_MODEL=llama-3.1-8b-instant
+GEMINI_API_KEY=your_api_key_here
 ```
 
 ---
