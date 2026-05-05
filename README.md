@@ -140,7 +140,7 @@ MindCare solves this by providing:
 ## 📸 Screenshots
 
 ### Landing Page
-![Landing Page](home.png)
+![Landing Page](dashboard.png)
 
 ### Student Dashboard
 ![Student Dashboard](home.png)
