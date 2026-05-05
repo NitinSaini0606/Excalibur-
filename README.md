@@ -1,4 +1,4 @@
-# 🧠 MindCare — AI-Powered Student Mental Health Support Platform
+#  MindCare — AI-Powered Student Mental Health Support Platform
 
 MindCare is a full-stack AI-powered mental health support platform designed to help students identify stress, anxiety, and depression risks early and access personalized support in a safe, private, and stigma-free environment.
 
@@ -6,7 +6,7 @@ It combines **clinically validated screening tools, Retrieval-Augmented Generati
 
 ---
 
-## ✨ Features
+##  Features
 
 ### 🧾 Standardized Mental Health Screening
 
@@ -29,7 +29,7 @@ A structured assessment system that helps students evaluate their mental health 
 
 ---
 
-### 🤖 RAG-Powered AI Chatbot
+###  RAG-Powered AI Chatbot
 
 An AI-powered chatbot that provides supportive and context-aware mental health guidance to students.
 
@@ -51,7 +51,7 @@ An AI-powered chatbot that provides supportive and context-aware mental health g
 
 ---
 
-### 📚 Personalized Resource Recommendations
+### Personalized Resource Recommendations
 
 A recommendation system that suggests helpful mental health resources based on student assessment scores and chatbot interactions.
 
@@ -72,7 +72,7 @@ A recommendation system that suggests helpful mental health resources based on s
 
 ---
 
-### 🚨 Smart Escalation & Admin Alerts
+###  Smart Escalation & Admin Alerts
 
 A privacy-first escalation system that alerts admins only when a student is detected as high-risk.
 
@@ -89,7 +89,7 @@ Student interactions remain private by default. Admin visibility is triggered on
 
 ---
 
-### 🧑‍🎓 Role-Based Dashboards
+###  Role-Based Dashboards
 
 MindCare provides separate dashboards for students and admins.
 
@@ -110,7 +110,7 @@ MindCare provides separate dashboards for students and admins.
 
 ---
 
-## 🧠 Why This Matters
+##  Why This Matters
 
 Students often face academic pressure, digital burnout, stress, anxiety, and emotional challenges, but many avoid seeking help due to stigma, fear of judgment, or lack of awareness.
 
@@ -125,7 +125,7 @@ MindCare solves this by providing:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Category | Tools / Technologies |
 |---|---|
@@ -137,7 +137,7 @@ MindCare solves this by providing:
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Landing Page
 ![Landing Page](dashboard.png)
@@ -289,7 +289,7 @@ http://localhost:5173
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create a `.env` file inside the required backend / AI folder:
 
@@ -304,7 +304,7 @@ GEMINI_API_KEY=your_api_key_here
 
 ---
 
-## 🧪 API Endpoints
+##  API Endpoints
 
 ### PHQ-9 Mental Health Screening
 
@@ -408,7 +408,7 @@ Sample response:
 
 ---
 
-## 🧩 Mental Health Knowledge Base
+##  Mental Health Knowledge Base
 
 The chatbot uses mental health-related content stored inside:
 
@@ -430,7 +430,7 @@ ai/data/
 
 ---
 
-## 🔄 RAG Ingestion
+##  RAG Ingestion
 
 Build or update the vector database:
 
@@ -447,7 +447,7 @@ python ingest.py --clear
 
 ---
 
-## 📌 Current Status
+##  Current Status
 
 - Frontend runs locally with React + Vite.
 - Backend APIs are implemented using Flask / Node.js.
@@ -459,7 +459,7 @@ python ingest.py --clear
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 MindCare is not a replacement for professional medical advice, diagnosis, or treatment. It is designed as a supportive early-awareness tool for students.
 
