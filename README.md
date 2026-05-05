@@ -143,16 +143,20 @@ MindCare solves this by providing:
 ![Landing Page](home.png)
 
 ### Student Dashboard
-![Student Dashboard](student-dashboard.png)
+![Student Dashboard](home.png)
 
-### AI Chatbot
-![AI Chatbot](chatbot.png)
+### Resources
+![AI Chatbot](resources.png)
 
 ### Mental Health Test
 ![Mental Health Test](test.png)
 
-### Admin Dashboard
-![Admin Dashboard](admin-dashboard.png)
+### Admin Dashboard 1
+![Admin Dashboard](adminanalysis.png)
+
+![Admin Dashboard](adminanalysis2.png)
+
+
 
 ---
 
