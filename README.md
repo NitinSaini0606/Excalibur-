@@ -1,8 +1,8 @@
-#  MindCare — AI-Powered Student Mental Health Support Platform
+#  MindCare — Student Mental Health Support Platform
 
 MindCare is a full-stack AI-powered mental health support platform designed to help students identify stress, anxiety, and depression risks early and access personalized support in a safe, private, and stigma-free environment.
 
-It combines **clinically validated screening tools, Retrieval-Augmented Generation (RAG), AI-powered chatbot support, personalized resource recommendations, and smart admin escalation** to support early mental health intervention for students.
+It combines **clinically validated screening tools, chatbot support, personalized resource recommendations, and smart admin escalation** to support early mental health intervention for students.
 
 ---
 
@@ -29,27 +29,7 @@ A structured assessment system that helps students evaluate their mental health 
 
 ---
 
-###  RAG-Powered AI Chatbot
 
-An AI-powered chatbot that provides supportive and context-aware mental health guidance to students.
-
-#### Key Capabilities
-- Student-friendly mental health conversations
-- Context-aware chatbot responses
-- Knowledge base-backed answers
-- Conversation history support
-- Privacy-focused interaction flow
-- Support for stress, anxiety, burnout, and academic pressure-related queries
-
-#### How It Works
-1. Mental health content is stored in a knowledge base.
-2. Text is split into smaller chunks.
-3. Chunks are converted into vector embeddings.
-4. Embeddings are stored in a vector database.
-5. Relevant chunks are retrieved based on the student query.
-6. The LLM generates grounded and supportive answers using retrieved context.
-
----
 
 ### Personalized Resource Recommendations
 
@@ -96,7 +76,6 @@ MindCare provides separate dashboards for students and admins.
 #### Student Dashboard
 - Take PHQ-9 and GAD-7 tests
 - View mental health risk category
-- Chat with AI mental health assistant
 - Access personalized resources
 - Track previous test results
 - Receive supportive guidance
@@ -118,7 +97,7 @@ MindCare solves this by providing:
 
 - Early identification of mental health risks
 - Private and judgment-free student support
-- AI-powered guidance for stress and emotional well-being
+- Guidance for stress and emotional well-being
 - Scalable support for educational institutions
 - Smart escalation for high-risk cases
 - A privacy-first mental health support system
@@ -130,8 +109,7 @@ MindCare solves this by providing:
 | Category | Tools / Technologies |
 |---|---|
 | Frontend | React.js, Vite, Tailwind CSS |
-| Backend | Python, Flask, REST APIs, Node.js, Express.js |
-| AI / NLP | Retrieval-Augmented Generation, Vector Embeddings, Knowledge Base Indexing |
+| Backend |  Node.js, Express.js, REST APIs |
 | Database | MySQL |
 | Tools | Git, GitHub, Postman, VS Code |
 
@@ -176,12 +154,11 @@ Backend APIs
 │   ├── Risk Categorization
 │   └── Result Storage
 │
-├── AI Chatbot
+├── Chatbot
 │   ├── Student Query
-│   ├── Query Processing
-│   ├── Vector Retrieval
-│   ├── Context Selection
-│   └── LLM-Based Response Generation
+│   ├── Gemini API Integration
+│   ├── Document-Grounded Response
+│   └── Mental Health Resource Lookup
 │
 ├── Resource Recommendation System
 │   ├── Test Score Analysis
@@ -262,17 +239,10 @@ Backend runs at:
 http://localhost:5000
 ```
 
-### 3. Start AI / RAG Pipeline
 
-Open a new terminal:
-
-```bash
-cd ai
-pip install -r requirements.txt
-python rag_pipeline.py
 ```
 
-### 4. Start Frontend
+### 3. Start Frontend
 
 Open a new terminal:
 
@@ -340,7 +310,7 @@ Sample request:
 
 ---
 
-### AI Chatbot
+###  Chatbot
 
 ```http
 POST /api/chat
@@ -430,20 +400,7 @@ ai/data/
 
 ---
 
-##  RAG Ingestion
 
-Build or update the vector database:
-
-```bash
-cd ai
-python ingest.py
-```
-
-Rebuild from scratch:
-
-```bash
-python ingest.py --clear
-```
 
 ---
 
@@ -452,7 +409,6 @@ python ingest.py --clear
 - Frontend runs locally with React + Vite.
 - Backend APIs are implemented using Flask / Node.js.
 - PHQ-9 and GAD-7 screening flow is available.
-- RAG-powered chatbot is integrated.
 - Personalized resource recommendation flow is implemented.
 - Admin alert system for high-risk cases is available.
 - Deployment optimization is in progress.
