@@ -1,6 +1,6 @@
-#  MindCare — Student Mental Health Support Platform
+#  MindTech — Student Mental Health Support Platform
 
-MindCare is a full-stack AI-powered mental health support platform designed to help students identify stress, anxiety, and depression risks early and access personalized support in a safe, private, and stigma-free environment.
+MindTech is a full-stack  mental health support platform designed to help students identify stress, anxiety, and depression risks early and access personalized support in a safe, private, and stigma-free environment.
 
 It combines **clinically validated screening tools, chatbot support, personalized resource recommendations, and smart admin escalation** to support early mental health intervention for students.
 
@@ -93,7 +93,7 @@ MindCare provides separate dashboards for students and admins.
 
 Students often face academic pressure, digital burnout, stress, anxiety, and emotional challenges, but many avoid seeking help due to stigma, fear of judgment, or lack of awareness.
 
-MindCare solves this by providing:
+MindTech solves this by providing:
 
 - Early identification of mental health risks
 - Private and judgment-free student support
@@ -115,7 +115,7 @@ MindCare solves this by providing:
 
 ---
 
-##  Screenshots & Video Demo of MindCare
+##  Screenshots & Video Demo of MindTech
 
 ### Project Demo
 👇
@@ -187,7 +187,7 @@ Backend APIs
 ## 📁 Project Structure
 
 ```txt
-MindCare/
+MindTech/
 ├── backend/                  # Backend server
 │   ├── __pycache__/           # Python cache files
 │   ├── config/                # Configuration files
@@ -229,7 +229,7 @@ MindCare/
 
 ```bash
 git clone https://github.com/NitinSaini0606/Excalibur-
-cd MindCare
+cd MindTech
 ```
 
 ### 2. Start Backend
@@ -424,6 +424,6 @@ ai/data/
 
 ##  Disclaimer
 
-MindCare is not a replacement for professional medical advice, diagnosis, or treatment. It is designed as a supportive early-awareness tool for students.
+MindTech is not a replacement for professional medical advice, diagnosis, or treatment. It is designed as a supportive early-awareness tool for students.
 
 In severe or emergency cases, users should contact a qualified mental health professional, trusted guardian, campus counselor, or emergency support service immediately.
