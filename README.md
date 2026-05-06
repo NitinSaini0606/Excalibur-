@@ -115,8 +115,11 @@ MindCare solves this by providing:
 
 ---
 
-##  Screenshots
+##  Screenshots & Video Demo of MindCare
 
+### Project Demo
+👇
+▶ [Watch Demo](https://youtu.be/7rRM3c7gHaM)
 ### Landing Page
 ![Landing Page](dashboard.png)
 
@@ -135,9 +138,7 @@ MindCare solves this by providing:
 ![Admin Dashboard](adminanalysis2.png)
 
 
-## Project Demo
-👇
-▶ [Watch Demo](https://youtu.be/7rRM3c7gHaM)
+
 
 
 
