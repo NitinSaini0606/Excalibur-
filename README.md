@@ -135,8 +135,9 @@ MindCare solves this by providing:
 ![Admin Dashboard](adminanalysis2.png)
 
 
-## Demo
-▶ [Watch Demo](https://youtu.be/7rRM3c7gHaM?feature=shared)
+## Project Demo
+👇
+▶ [Watch Demo](https://youtu.be/7rRM3c7gHaM)
 
 
 
