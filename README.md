@@ -117,25 +117,24 @@ MindTech solves this by providing:
 
 ##  Screenshots & Video Demo of MindTech
 
-### Project Demo
-👇
+### Project Demo 👇
 ▶ [Watch Demo](https://youtu.be/7rRM3c7gHaM)
 ### Landing Page
-![Landing Page](dashboard.png)
+![Landing Page](assets/dashboard.png)
 
 ### Student Dashboard
-![Student Dashboard](home.png)
+![Student Dashboard](assets/home.png)
 
 ### Resources
-![AI Chatbot](resources.png)
+![AI Chatbot](assets/resources.png)
 
 ### Mental Health Test
-![Mental Health Test](test.png)
+![Mental Health Test](assets/test.png)
 
 ### Admin Dashboard 1
-![Admin Dashboard](adminanalysis.png)
+![Admin Dashboard](assets/adminanalysis.png)
 
-![Admin Dashboard](adminanalysis2.png)
+![Admin Dashboard](assets/adminanalysis2.png)
 
 
 
@@ -188,6 +187,7 @@ Backend APIs
 
 ```txt
 MindTech/
+
 ├── backend/                  # Backend server
 │   ├── __pycache__/           # Python cache files
 │   ├── config/                # Configuration files
@@ -202,12 +202,12 @@ MindTech/
 │   ├── testGemini.js          # Gemini API testing script
 │   ├── package.json           # Backend Node dependencies
 │   └── package-lock.json      # Backend dependency lock file
-│
+│── assets/                   #Images
 ├── public/                   # Public static files
 │   └── vite.svg
 │
 ├── src/                      # React + Vite frontend source
-│   ├── assets/                # Images and static assets
+│   ├── asset/                # Images and static assets
 │   ├── components/            # Reusable UI components
 │   ├── contexts/              # React context files
 │   ├── pages/                 # Application pages
