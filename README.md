@@ -110,6 +110,7 @@ MindTech solves this by providing:
 |---|---|
 | Frontend | React.js, Vite, Tailwind CSS |
 | Backend |  Node.js, Express.js, REST APIs |
+| Chatbot Service | Python, Gemini API |
 | Database | MySQL |
 | Tools | Git, GitHub, Postman, VS Code |
 
